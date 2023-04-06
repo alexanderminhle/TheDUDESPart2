@@ -14,6 +14,13 @@ Servo myservo;  // create servo object to control a servo
 int potpin = A0;  // analog pin used to connect the potentiometer
 int val;    // variable to read the value from the analog pin
 
+//BUTTONS//
+int Button1 = 2; // assign int to button
+int Button2 = 5; // assign int to button
+int Button3 = 8; // assign int to button
+int Button4 = 13; // assign int to button
+//BUTTONS//
+
 void setup() {
   myservo.attach(9);  // attaches the servo on pin 9 to the servo object
 }
