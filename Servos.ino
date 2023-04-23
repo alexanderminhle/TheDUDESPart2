@@ -15,7 +15,7 @@ int lastButtonState;    // the previous state of button
 int currentButtonState; // the current state of button
 
 void setup() {
-  Serial.begin(9600);                // initialize serial
+  Serial.begin(9600);  // initialize serial
   pinMode(BUTTON_PIN, INPUT_PULLUP); // set arduino pin to input pull-up mode
   servo1.attach(SERVO_PIN1);
   servo2.attach(SERVO_PIN2);
@@ -25,7 +25,7 @@ void setup() {
 }
 
 void loop() {
-  lastButtonState    = currentButtonState;      // save the last state
+  lastButtonState    = currentButtonState;    // save the last state
   currentButtonState = digitalRead(BUTTON_PIN); // read new state
 
   if(lastButtonState == HIGH && currentButtonState == LOW) {

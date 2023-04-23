@@ -12,8 +12,8 @@ Servo servo1;
 Servo servo2;
 
 // variables will change:
-int angle = 0;          // the current angle of servo motors
-int lastButtonState1;    // the previous state of button
+int angle = 0;  // the current angle of servo motors
+int lastButtonState1; // the previous state of button
 int lastButtonState2;
 int lastButtonState3;
 int currentButtonState1; // the current state of button
@@ -21,7 +21,7 @@ int currentButtonState2;
 int currentButtonState3;
 
 void setup() {
-  Serial.begin(9600);                // initialize serial
+  Serial.begin(9600);  // initialize serial
   pinMode(BUTTON_PIN1, INPUT_PULLUP); // set arduino pin to input pull-up mode
   pinMode(BUTTON_PIN2, INPUT_PULLUP);
   pinMode(BUTTON_PIN3, INPUT_PULLUP);
@@ -36,9 +36,9 @@ void setup() {
 }
 
 void loop() {
-  lastButtonState1    = currentButtonState1;      // save the last state
-  lastButtonState2    = currentButtonState2;
-  lastButtonState3    = currentButtonState3;
+  lastButtonState1 = currentButtonState1; // save the last state
+  lastButtonState2 = currentButtonState2;
+  lastButtonState3 = currentButtonState3;
   currentButtonState1 = digitalRead(BUTTON_PIN1);
   currentButtonState2 = digitalRead(BUTTON_PIN2);
   currentButtonState3 = digitalRead(BUTTON_PIN3);
@@ -53,7 +53,7 @@ void loop() {
     if(angle == 90)
       angle = 0;
 
-    // control servo motors arccoding to the angle
+    // control servo motors according to the angle
     servo1.write(angle);
     servo2.write(angle);
   }
@@ -68,7 +68,7 @@ void loop() {
     if(angle >= 170)
       angle = 0;
 
-    // control servo motors arccoding to the angle
+    // control servo motors according to the angle
     servo1.write(angle);
     servo2.write(angle);
   }
@@ -77,7 +77,7 @@ void loop() {
     Serial.println("The button is pressed");
 
       digitalWrite(LED_BUILTIN, HIGH);  // turn the LED on (HIGH is the voltage level)
-  delay(1000);                      // wait for a second
+  delay(1000);  // wait for a second
   digitalWrite(LED_BUILTIN, LOW);   // turn the LED off by making the voltage LOW
   delay(1000);    
   }
