@@ -1,3 +1,12 @@
+/*
+The Little Prince
+
+Team Name: The Dudes: Part 2
+Team Members: Adam Zuber and Alexander Le
+Description: A short scene from The Little Prince using two servos that spin 180 degrees + copper tape for LEDs + copper tape switches
+
+*/
+
 #include <Servo.h>
 
 // constants won't change
